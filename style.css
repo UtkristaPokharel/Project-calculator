@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+#calcbody {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	background-color: #000;
+	width: 405px;
+	height: 600px;
+}
+
+.screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	width: 95%;
+	height: 20%;
+
+}
+
+.screen .upper {
+	display: flex;
+	width: 90%;
+	height: 30%;
+}
+
+.screen .lower {
+	display: flex;
+	width: 90%;
+	height: 70%;
+     justify-content:right;
+	align-items:center;
+	font-size: xx-large;
+}
+
+
+.buttonset {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	width: 360px;
+	height: 70%;
+	gap: 5px;
+	background-color: #000;
+}
+
+.buttonset button {
+	flex: 1 1 auto;
+	height: 70px;
+	width: 78px;
+	border: none;
+	border-radius: 40%;
+	background-color: rgb(51, 51, 51);
+	color: #ffffff;
+	font-size: x-large;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.buttonset .AC,
+.buttonset .equal {
+	flex: 2 1 auto;
+	width: 140px;
+	border-radius: 35px;
+}
+
+.buttonset .divide,
+.buttonset .equal,
+.buttonset .mul,
+.buttonset .sub,
+.buttonset .add {
+	background-color: rgb(255, 153, 21);
+}
+
+.buttonset .AC,
+.buttonset .Clear {
+	background-color: rgb(163, 164, 165);
+}
