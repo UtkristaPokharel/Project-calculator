@@ -48,6 +48,9 @@ body {
 	display: flex;
 	width: 90%;
 	height: 30%;
+	justify-content:right;
+	align-items:center;
+	font-size:large;
 }
 
 .screen .lower {
