@@ -30,8 +30,8 @@ function setnumericBtn() {
 		return;
 	}
 
-	if ((currentNumber === "0" && this.textContent !== '.') || currentOperator !== "" || this.textContent === '-') {
-		currentNumber = this.textContent;
+	if (currentNumber === "0" || currentOperator !== "") {
+		currentNumber += this.textContent;
 	} else {
 		currentNumber += this.textContent;
 	}
@@ -95,7 +95,6 @@ function setfuncBtn() {
 	dotClicked = false;
 	upperScreen.textContent = previousNumber + ' ' + currentOperator;
 }
-
 function calculateResult() {
 	let result;
 	const firstNum = parseFloat(previousNumber);
