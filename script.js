@@ -64,21 +64,21 @@ function setcmdBtn() {
 }
 
 
-function setfuncBtn() {
-	if (currentNumber === "")
-		return;
-	if (previousNumber !== "" && currentOperator !== "") {
-		let result = calculateResult();
-		previousNumber = result;
-		lowerScreen.textContent = String(result);
-	} else {
-		previousNumber = currentNumber;
-	}
-	currentNumber = "";
-	currentOperator = this.textContent;
-	dotClicked = false; // 
-	upperScreen.textContent = previousNumber;
-}
+// function setfuncBtn() {
+// 	if (currentNumber === "")
+// 		return;
+// 	if (previousNumber !== "" && currentOperator !== "") {
+// 		let result = calculateResult();
+// 		previousNumber = result;
+// 		lowerScreen.textContent = String(result);
+// 	} else {
+// 		previousNumber = currentNumber;
+// 	}
+// 	currentNumber = "";
+// 	currentOperator = this.textContent;
+// 	dotClicked = false; 
+// 	upperScreen.textContent = previousNumber;
+// }
 
 function setfuncBtn() {
 	if (currentNumber === "")
