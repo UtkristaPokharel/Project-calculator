@@ -46,7 +46,7 @@ function setnumericBtn() {
 
   // Clear previous number if operator is pressed or current number is 0
   if (currentNumber === "0" || currentOperator !== "") {
-    currentNumber = this.textContent;
+    currentNumber += this.textContent;
   } else {
     currentNumber += this.textContent;
   }
