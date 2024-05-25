@@ -76,25 +76,21 @@ function setcmdBtn() {
 
 // Function to handle function button clicks (+, -, *, /)
 function setfuncBtn() {
-  // Do nothing if no current number
-  if (currentNumber === "") return;
-
-  // Calculate result if there's a previous number and operator
-  if (previousNumber !== "" && currentOperator !== "") {
-    let result = calculateResult();
-    previousNumber = result;
-    lowerScreen.textContent = String(result);
-  } else {
-    // Set previous number if no previous calculation
-    previousNumber = currentNumber;
-  }
-
-  // Reset current number, set operator, update upper screen
-  currentNumber = "";
-  currentOperator = this.textContent;
-  dotClicked = false;
-  upperScreen.textContent = previousNumber + ' ' + currentOperator;
-  lowerScreen.textContent = '';
+	if (currentNumber !== "") {
+		if (previousNumber !== "" && currentOperator !== "") {
+			let result = calculateResult();
+			previousNumber = result;
+			lowerScreen.textContent = String(result);
+		} else if (previousNumber === "" && currentNumber !== "") {
+			previousNumber = currentNumber;
+		}
+	}
+   // Reset current number, set operator, update upper screen
+	currentNumber = "";
+	currentOperator = this.textContent;
+	dotClicked = false;
+	upperScreen.textContent = previousNumber + ' ' + currentOperator;
+	lowerScreen.textContent = '';
 }
 
 // Add click event listener to equal button
